@@ -1,20 +1,65 @@
+@blue : #00b0ff;
+
+#repeatedCode {
+	.highlight {
+		color: #fff;
+		background-color: @blue;
+	}
+	.nav__ul {
+		list-style: none;
+		display: inline-block;
+		margin-left: 60px;
+	}
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+img {
+	width: 100%;
+}
+
 .nav {
-	width: 1000px;
-	margin: 20px auto;
-	background-color: #9A4D9A;
+	width: 63.5em;
+	margin: 1.25em auto;
+	
+	.nav__logo {
+		font-size: 1.875em;
+		font-weight: 700;
+	}
 	
 	.nav__items {
-		list-style: none;
-		display: inline-block;
+		#repeatedCode > .nav__ul;
+		font-size: 0.875em;
 	}
 	.nav__item {
 		display: inline-block;
 	}
 	.nav__link {
 		text-decoration: none;
+		color: #000;
+		padding: 5px 15px;
 	}
+	.nav__link--active {
+		
+	}
+	.nav__link:hover {
+		#repeatedCode > .highlight;
+	}
+	.nav__icons {
+		#repeatedCode > .nav__ul;
+	}
+	.nav__item--icon {
+		background-color: #000;
+		border-radius: 50%;
+		display: inline-block;
+		height: 2.250em;
+		width: 2.250em;
+	}
+	.nav__icon {
+		height: 2.250em;
+		transform: scale(0.5, 0.5)
+	}
+	
 }
