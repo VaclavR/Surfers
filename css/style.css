@@ -1,18 +1,57 @@
+#repeatedCode .highlight {
+  color: #fff;
+  background-color: #00b0ff;
+}
+#repeatedCode .nav__ul {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
 body {
   font-family: 'Montserrat', sans-serif;
 }
+img {
+  width: 100%;
+}
 .nav {
-  width: 1000px;
-  margin: 20px auto;
-  background-color: #9A4D9A;
+  width: 63.5em;
+  margin: 1.25em auto;
+}
+.nav .nav__logo {
+  font-size: 1.875em;
+  font-weight: 700;
 }
 .nav .nav__items {
   list-style: none;
   display: inline-block;
+  margin-left: 60px;
+  font-size: 0.875em;
 }
 .nav .nav__item {
   display: inline-block;
 }
 .nav .nav__link {
   text-decoration: none;
+  color: #000;
+  padding: 5px 15px;
+}
+.nav .nav__link:hover {
+  color: #fff;
+  background-color: #00b0ff;
+}
+.nav .nav__icons {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+.nav .nav__item--icon {
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  height: 2.250em;
+  width: 2.250em;
+}
+.nav .nav__icon {
+  height: 2.250em;
+  transform: scale(0.5, 0.5);
 }
