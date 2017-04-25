@@ -12,6 +12,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: aquamarine;
   box-sizing: border-box;
+  margin: 0;
 }
 img {
   width: 100%;
@@ -47,6 +48,10 @@ img {
   color: #fff;
   background-color: #00b0ff;
 }
+.nav .nav__link--active {
+  color: #fff;
+  background-color: #00b0ff;
+}
 .nav .nav__icons {
   list-style: none;
   display: inline-block;
@@ -60,12 +65,15 @@ img {
   height: 2.250em;
   width: 2.250em;
 }
+.nav .nav__item--icon:hover {
+  background-color: #4C58C8;
+}
 .nav .nav__icon {
   height: 2.250em;
   transform: scale(0.5, 0.5);
 }
 .header {
-  width: 53.5em;
+  width: 45.5em;
   margin: 3.75em auto 0;
   text-align: center;
   font-family: 'Playfair Display', serif;
@@ -76,4 +84,9 @@ img {
 .header .header__p {
   color: #fff;
   font-size: 1.5em;
+}
+.carousel {
+  width: 1530px;
+  margin: 3.75em auto 0;
+  display: flex;
 }

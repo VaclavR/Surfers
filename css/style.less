@@ -12,13 +12,12 @@
 		padding: 0;
 	}
 }
-
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: aquamarine;
 	box-sizing: border-box;
+	margin: 0;
 }
-
 img {
 	width: 100%;
 }
@@ -45,11 +44,11 @@ img {
 		text-decoration: none;
 		color: #000;
 		padding: 5px 15px;
+		&:hover {
+			#repeatedCode > .highlight;
+		}
 	}
 	.nav__link--active {
-		
-	}
-	.nav__link:hover {
 		#repeatedCode > .highlight;
 	}
 	.nav__icons {
@@ -61,6 +60,9 @@ img {
 		display: inline-block;
 		height: 2.250em;
 		width: 2.250em;
+		&:hover {
+			background-color: #4C58C8;
+		}
 	}
 	.nav__icon {
 		height: 2.250em;
@@ -69,7 +71,7 @@ img {
 }
 
 .header {
-	width: 53.5em;
+	width: 45.5em;
 	margin: 3.75em auto 0;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
@@ -80,4 +82,10 @@ img {
 		color: #fff;
 		font-size: 1.5em;	
 	}
+}
+
+.carousel {
+	width: 1530px;
+	margin: 3.75em auto 0;
+	display: flex;
 }
