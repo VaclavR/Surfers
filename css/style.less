@@ -8,12 +8,15 @@
 	.nav__ul {
 		list-style: none;
 		display: inline-block;
-		margin-left: 60px;
+		margin: 0 0 0 60px;
+		padding: 0;
 	}
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	background-color: aquamarine;
+	box-sizing: border-box;
 }
 
 img {
@@ -22,15 +25,17 @@ img {
 
 .nav {
 	width: 63.5em;
+	height: 2.5em;
 	margin: 1.25em auto;
-	
 	.nav__logo {
 		font-size: 1.875em;
 		font-weight: 700;
+		vertical-align: 0.15em;
 	}
-	
 	.nav__items {
 		#repeatedCode > .nav__ul;
+		padding: 0 0 1.3125em 0;
+    	vertical-align: middle;
 		font-size: 0.875em;
 	}
 	.nav__item {
@@ -61,5 +66,18 @@ img {
 		height: 2.250em;
 		transform: scale(0.5, 0.5)
 	}
-	
+}
+
+.header {
+	width: 53.5em;
+	margin: 3.75em auto 0;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	.header__h1 {
+		font-size: 3.125em;
+	}
+	.header__p {
+		color: #fff;
+		font-size: 1.5em;	
+	}
 }
