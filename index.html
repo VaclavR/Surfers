@@ -3,15 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Surfers</title>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 <link rel="icon" href="imgs/surfs.png">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	
+	<div class="background one"></div>
+	<div class="background two"><span>About Us</span></div>
+	<div class="background three"></div>
 	<nav class="nav">
 		<span class="nav__logo">Surfers Co.</span>
 		
@@ -37,29 +40,55 @@
 	</header>
 	
 	<section class="carousel">
-		<div class="carousel__column--left">
+	
+		<div class="carousel__column-left">
 			<div class="carousel__image"><img src="imgs/Board.png" alt="board"></div>
 		</div>
-		<div class="carousel__column--middle">
-			<div class="carousel__smallimage"><img src="imgs/surfs.png" alt="surfs"></div>
-			<div class="carousel__smallimage"><img src="imgs/surf.png" alt="surf"></div>
-			<div class="carousel__smallimage"><img src="imgs/surf2.png" alt="surf2"></div>
-			<div class="carousel__smallimage"><img src="imgs/surf3.png" alt="surf3"></div>
-		</div>
-		<div class="carousel__column--right">
-			<h2 class="carousel__h2">JR Surfboards The Donny Stoker<br/>
-				Yellow/Green Rail Fade</h2>
-			<div class="carousel__stars"></div>
-			<div class="carousel__headings">
-				<span class="carousel__heading">Description</span>
-				<span class="carousel__heading">Features</span>
-				<span class="carousel__heading">Dimensions</span>
+		
+		<div class="carousel__column-middle">
+			<div class="carousel__small-image-container">
+				<div class="carousel__small-image carousel__small-image--active"><img src="imgs/surfs.png" alt="surfs"></div>
+				<div class="carousel__small-image"><img src="imgs/surf.png" alt="surf"></div>
+				<div class="carousel__small-image"><img src="imgs/surf2.png" alt="surf2"></div>
+				<div class="carousel__small-image"><img src="imgs/surf3.png" alt="surf3"></div>
 			</div>
-			<div class="carousel__headings-underline"></div>
-			<p class="carousel__p">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
-			<span class="carousel__price">$499.99</span>
-			<span class="carousel__button">Buy Now</span>
-			<a href="#" class="carousel__link">View all boards</a>
+		</div>
+		
+		<div class="carousel__column-right">
+			<div class="carousel__content-container">
+				<h2 class="carousel__h2">JR Surfboards The Donny Stoker<br/>
+					Yellow/Green Rail Fade</h2>
+				<div class="carousel__stars">
+					<span class="star"></span>
+					<span class="star"></span>
+					<span class="star"></span>
+					<span class="star"></span>
+					<span class="star star--empty"></span>
+					<span class="stars__count">(52)</span>
+				</div>
+				<div class="carousel__menu-items">
+					<span class="carousel__menu-item carousel__menu-item--active">Description</span><i class="space"></i>
+					<span class="carousel__menu-item">Features</span><i class="space"></i>
+					<span class="carousel__menu-item">Dimensions</span>
+				</div>
+				<div class="carousel__menu-items-underline"></div>
+				<p class="carousel__p">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
+				<div class="carousel__shop">
+					<span class="carousel__price">$499.99</span>
+					<span class="button">Buy now</span>
+				</div>
+				<a href="#" class="carousel__link">View all boards</a>
+			</div>
+		</div>
+		<div class="carousel__column-controls">
+			<div class="overflow-hidden">
+				<div class="rotated-text">Boards</div>
+			</div>
+			<div class="arrows">
+				<span class="arrow"><img src="imgs/Arrow_left.png" alt="left"></span>
+				<span class="arrow"><img src="imgs/Arrow_right.png" alt="right"></span>
+			</div>
+			<div class="pagination"><span>05/25</span></div>
 		</div>
 	</section>
 	

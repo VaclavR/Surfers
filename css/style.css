@@ -1,26 +1,87 @@
-#repeatedCode .highlight {
-  color: #fff;
-  background-color: #00b0ff;
-}
 #repeatedCode .nav__ul {
   list-style: none;
   display: inline-block;
   margin: 0 0 0 60px;
   padding: 0;
 }
+#repeatedCode .nav-item--highlight {
+  color: #fff;
+  background-color: #00b0ff;
+  transition: 0.3s all ease-out;
+}
+#repeatedCode .small-image--highlight {
+  outline: 3px solid #00b0ff;
+  outline-offset: -3px;
+}
+#repeatedCode .menu-item--higlight {
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: aquamarine;
   box-sizing: border-box;
   margin: 0;
+  position: relative;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+}
+.background.one {
+  height: 700px;
+  background-image: url("../imgs/hero.png");
+}
+.background.two {
+  top: 700px;
+  height: 550px;
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.background.two span {
+  font-family: Montserrat;
+  color: rgba(0, 0, 0, 0.03);
+  font-size: 196px;
+  font-weight: 700;
+  letter-spacing: 25px;
+  height: 165px;
+}
+.background.three {
+  top: 1250px;
+  height: 640px;
+  background: url("../imgs/surfer.png");
 }
 img {
   width: 100%;
 }
+.space {
+  width: 20px;
+  display: inline-block;
+}
+.button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 33px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00b0ff;
+  letter-spacing: 1px;
+  transition: 0.3s all ease-out;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #0080ff;
+}
 .nav {
   width: 63.5em;
   height: 2.5em;
-  margin: 1.25em auto;
+  margin: 0 auto 1.25em;
+  padding-top: 1.25em;
 }
 .nav .nav__logo {
   font-size: 1.875em;
@@ -47,10 +108,12 @@ img {
 .nav .nav__link:hover {
   color: #fff;
   background-color: #00b0ff;
+  transition: 0.3s all ease-out;
 }
 .nav .nav__link--active {
   color: #fff;
   background-color: #00b0ff;
+  transition: 0.3s all ease-out;
 }
 .nav .nav__icons {
   list-style: none;
@@ -86,7 +149,166 @@ img {
   font-size: 1.5em;
 }
 .carousel {
-  width: 1530px;
+  width: 64.375em;
+  height: 600px;
   margin: 3.75em auto 0;
+  box-shadow: 8px 7px 17px #e4e4e4;
   display: flex;
+  background-color: #fff;
+  background: linear-gradient(128.8deg, #00d2ff 0%, #00d2ff 32%, #ffffff 32%, #ffffff 100%);
+}
+.carousel .carousel__column-left {
+  flex: 42.57;
+}
+.carousel .carousel__column-left .carousel__image {
+  width: 79.5%;
+  margin: 17.68% auto;
+}
+.carousel .carousel__column-middle {
+  flex: 6.8;
+  display: flex;
+  align-items: center;
+}
+.carousel .carousel__column-middle .carousel__small-image-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.carousel .carousel__column-middle .carousel__small-image {
+  border: 1px solid #a0a0a0;
+  margin-bottom: 3px;
+  height: 70px;
+}
+.carousel .carousel__column-middle .carousel__small-image:hover {
+  outline: 3px solid #00b0ff;
+  outline-offset: -3px;
+}
+.carousel .carousel__column-middle .carousel__small-image--active {
+  outline: 3px solid #00b0ff;
+  outline-offset: -3px;
+}
+.carousel .carousel__column-right {
+  flex: 42.57;
+  display: flex;
+}
+.carousel .carousel__column-right .carousel__content-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.carousel .carousel__column-right .carousel__h2 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.carousel .carousel__column-right .carousel__stars {
+  display: flex;
+}
+.carousel .carousel__column-right .carousel__stars .star {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  background: url("../imgs/Star.png");
+}
+.carousel .carousel__column-right .carousel__stars .star--empty {
+  background: url("../imgs/Star-empty.png");
+}
+.carousel .carousel__column-right .carousel__stars .stars__count {
+  display: inline-flex;
+  font-size: 12px;
+}
+.carousel .carousel__column-right .carousel__menu-items {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a0a0a0;
+}
+.carousel .carousel__column-right .carousel__menu-items .carousel__menu-item {
+  padding-bottom: 4px;
+}
+.carousel .carousel__column-right .carousel__menu-items .carousel__menu-item:hover {
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+  border-bottom: 3px solid #00b0ff;
+}
+.carousel .carousel__column-right .carousel__menu-items .carousel__menu-item--active {
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+.carousel .carousel__column-right .carousel__p {
+  font-family: 'Raleway', sans-serif;
+  color: #787878;
+  line-height: 24px;
+}
+.carousel .carousel__column-right .carousel__price {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-right: 30px;
+}
+.carousel .carousel__column-right .carousel__link {
+  margin-top: 90px;
+  color: #00b0ff;
+}
+.carousel .carousel__column-controls {
+  width: 83px;
+  position: relative;
+}
+.carousel .carousel__column-controls .arrows {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: -38px;
+}
+.carousel .carousel__column-controls .arrows .arrow {
+  display: flex;
+  background-color: #f2d800;
+  width: 38px;
+  height: 38px;
+}
+.carousel .carousel__column-controls .arrows .arrow img {
+  width: 50%;
+  margin: auto;
+}
+.carousel .carousel__column-controls .arrows .arrow:hover {
+  background-color: #B8A500;
+  cursor: pointer;
+}
+.carousel .carousel__column-controls .pagination {
+  position: absolute;
+  width: 50px;
+  height: 38px;
+  background-color: #000;
+  color: #fff;
+  right: 0;
+  top: 88px;
+  font-size: 14px;
+  display: flex;
+}
+.carousel .carousel__column-controls .pagination span {
+  margin: auto;
+}
+.carousel .carousel__column-controls .overflow-hidden {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width: 83px;
+}
+.carousel .carousel__column-controls .rotated-text {
+  position: absolute;
+  font-size: 127px;
+  transform: matrix(0, -1, 1, 0, -285, 264);
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.03);
+  letter-spacing: 10px;
+  height: 83px;
+  width: 600px;
 }
