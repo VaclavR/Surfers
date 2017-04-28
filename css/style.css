@@ -18,6 +18,16 @@
   cursor: pointer;
   transition: 0.3s all ease-out;
 }
+#repeatedCode .card--highlight {
+  background-color: #00b0ff;
+}
+#repeatedCode .card--highlight .people__name {
+  color: #fff;
+}
+#repeatedCode .card--highlight .people__twitter,
+#repeatedCode .card--highlight .people__location {
+  color: #b3e7ff;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: aquamarine;
@@ -30,6 +40,20 @@ body {
   width: 100%;
   z-index: -100;
 }
+.background.white {
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.background.white span {
+  font-family: Montserrat;
+  color: rgba(0, 0, 0, 0.03);
+  font-weight: 700;
+  letter-spacing: 25px;
+  height: 165px;
+}
 .background.one {
   height: 700px;
   background-image: url("../imgs/hero.png");
@@ -37,24 +61,21 @@ body {
 .background.two {
   top: 700px;
   height: 550px;
-  background-color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.background.two span {
-  font-family: Montserrat;
-  color: rgba(0, 0, 0, 0.03);
   font-size: 196px;
-  font-weight: 700;
-  letter-spacing: 25px;
-  height: 165px;
 }
 .background.three {
   top: 1250px;
   height: 640px;
   background: url("../imgs/surfer.png");
+}
+.background.four {
+  top: 1890px;
+  height: 600px;
+  font-size: 190px;
+}
+.background.five {
+  top: 2490px;
+  height: 1000px;
 }
 img {
   width: 100%;
@@ -76,6 +97,10 @@ img {
 .button:hover {
   cursor: pointer;
   background-color: #0080ff;
+}
+.link {
+  margin-top: 90px;
+  color: #00b0ff;
 }
 .nav {
   width: 63.5em;
@@ -252,10 +277,6 @@ img {
   line-height: 40px;
   margin-right: 30px;
 }
-.carousel .carousel__column-right .carousel__link {
-  margin-top: 90px;
-  color: #00b0ff;
-}
 .carousel .carousel__column-controls {
   width: 83px;
   position: relative;
@@ -311,4 +332,169 @@ img {
   letter-spacing: 10px;
   height: 83px;
   width: 600px;
+}
+.about-us {
+  width: 100%;
+  margin: 44.75em 0 0;
+  height: 600px;
+}
+.about-us .about-us__container {
+  display: flex;
+}
+.about-us .about-us__text {
+  width: 945px;
+  height: 530px;
+  background-color: #fff;
+}
+.about-us .about-us__text .about-us__inner {
+  margin: 80px auto 0;
+  width: 341px;
+}
+.about-us .about-us__text h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.about-us .about-us__text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  line-height: 38px;
+  margin-top: 0;
+}
+.about-us .about-us__video {
+  align-self: flex-end;
+  margin-left: 60px;
+  width: 500px;
+  height: 300px;
+  background-image: url("../imgs/video.png");
+  background-size: cover;
+  display: flex;
+  box-shadow: 8px 7px 17px #e4e4e4;
+}
+.about-us .about-us__video .about-us__image-container {
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+}
+.about-us .about-us__video img {
+  width: 90px;
+  margin: auto;
+}
+.our-team {
+  width: 100%;
+  margin-top: 250px;
+}
+.our-team .blue-arrow {
+  position: absolute;
+  top: calc(125px);
+  width: 51px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  display: flex;
+}
+.our-team .blue-arrow img {
+  margin: auto;
+  width: 16px;
+}
+.our-team .blue-arrow.left-arrow {
+  left: -75px;
+}
+.our-team .blue-arrow.right-arrow {
+  right: -15px;
+}
+.our-team .blue-arrow:hover {
+  background-color: #d6d6d6;
+}
+.our-team .our-team__people {
+  margin: 0 auto;
+  width: 64.375em;
+  height: 300px;
+  display: flex;
+  position: relative;
+  transform: translateX(60px);
+}
+.our-team .our-team__people .people__card {
+  width: 260px;
+  height: 278px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 10px 17px 50px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.our-team .our-team__people .people__card.people__card--active {
+  background-color: #00b0ff;
+}
+.our-team .our-team__people .people__card.people__card--active .people__name {
+  color: #fff;
+}
+.our-team .our-team__people .people__card.people__card--active .people__twitter,
+.our-team .our-team__people .people__card.people__card--active .people__location {
+  color: #b3e7ff;
+}
+.our-team .our-team__people .people__card:nth-child(2) {
+  transform: translate(-20px, 20px);
+  z-index: 100;
+}
+.our-team .our-team__people .people__card:nth-child(3) {
+  transform: translateX(-40px);
+}
+.our-team .our-team__people .people__card:nth-child(4) {
+  transform: translate(-60px, 20px);
+  z-index: 100;
+}
+.our-team .our-team__people .people__card .people__image {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 20px auto 0;
+}
+.our-team .our-team__people .people__card .people__name {
+  font-family: Montserrat;
+  color: #00b0ff;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px auto 0;
+}
+.our-team .our-team__people .people__card .people__twitter {
+  font-family: Raleway;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 auto;
+}
+.our-team .our-team__people .people__card .people__separator {
+  width: 31px;
+  margin: 10px auto;
+}
+.our-team .our-team__people .people__card .people__location {
+  margin: 0 auto;
+  font-family: Raleway;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 400;
+}
+.our-team .our-team__people .people__card .people__location img {
+  width: 11px;
+  padding-right: 5px;
+}
+.our-team .our-team__people .people__card:hover {
+  background-color: #00b0ff;
+}
+.our-team .our-team__people .people__card:hover .people__name {
+  color: #fff;
+}
+.our-team .our-team__people .people__card:hover .people__twitter,
+.our-team .our-team__people .people__card:hover .people__location {
+  color: #b3e7ff;
 }

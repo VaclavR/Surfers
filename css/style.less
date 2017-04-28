@@ -1,4 +1,5 @@
 @blue : #00b0ff;
+@shift: 20px;
 
 #repeatedCode {
 	.nav__ul {
@@ -21,6 +22,15 @@
 		cursor: pointer;
 		transition: 0.3s all ease-out;
 	}
+	.card--highlight {
+		background-color: #00b0ff;
+		.people__name {
+			color: #fff;
+		}
+		.people__twitter, .people__location {
+			color: #b3e7ff;
+		}
+	}
 }
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -33,13 +43,7 @@ body {
 	position: absolute;
 	width: 100%;
 	z-index: -100;
-	&.one {
-		height: 700px;
-		background-image: url("../imgs/hero.png");
-	}
-	&.two {
-		top: 700px;
-		height: 550px;
+	&.white {
 		background-color: #fff;
 		text-align: center;
 		text-transform: uppercase;
@@ -48,16 +52,34 @@ body {
 		span {
 			font-family: Montserrat;
 			color: rgba(0, 0, 0, 0.03);
-			font-size: 196px;
+			
 			font-weight: 700;
 			letter-spacing: 25px;
 			height: 165px;
 		}
 	}
+	&.one {
+		height: 700px;
+		background-image: url("../imgs/hero.png");
+	}
+	&.two {
+		top: 700px;
+		height: 550px;
+		font-size: 196px;
+	}
 	&.three {
 		top: 1250px;
 		height: 640px;
 		background: url("../imgs/surfer.png");
+	}
+	&.four {
+		top: 1890px;
+		height: 600px;
+		font-size: 190px;
+	}
+	&.five {
+		top: 2490px;
+		height: 1000px;
 	}
 }
 img {
@@ -81,6 +103,10 @@ img {
 		background-color: #0080ff;
 	}
 }
+.link {
+			margin-top: 90px;
+			color: @blue;
+		}
 
 .nav {
 	width: 63.5em;
@@ -241,10 +267,6 @@ img {
 			line-height: 40px;
 			margin-right: 30px;
 		}
-		.carousel__link {
-			margin-top: 90px;
-			color: @blue;
-		}
 		
 	}
 	.carousel__column-controls {
@@ -301,6 +323,161 @@ img {
 			letter-spacing: 10px;
 			height: 83px;
     		width: 600px;
+		}
+	}
+}
+
+.about-us {
+	width: 100%;
+	margin: 44.75em 0 0;
+	height: 600px;
+	.about-us__container {
+		display: flex;
+	}
+	.about-us__text {
+		width: 945px;
+		height: 530px;
+		background-color: #fff;
+		.about-us__inner {
+			margin: 80px auto 0;
+			width: 341px;
+		}
+		h3 {
+			font-size: 18px;
+			text-transform: uppercase;
+			line-height: 1.5;
+			font-weight: 400;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+		p {
+			font-family: 'Playfair Display', serif;
+			font-size: 22px;
+			line-height: 38px;
+			margin-top: 0;
+		}
+		a {
+		}
+		
+	}
+	.about-us__video {
+		align-self: flex-end;
+		margin-left: 60px;
+		width: 500px;
+		height: 300px;
+		background-image: url("../imgs/video.png");
+		background-size: cover;
+		display: flex;
+		box-shadow: 8px 7px 17px #e4e4e4;
+		.about-us__image-container {
+			height: 140px;
+			width: 140px;
+			margin: auto;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			display: flex;
+		}
+		img {
+			width: 90px;
+			margin: auto;
+		}
+	}
+}
+.our-team {
+	width: 100%;
+	margin-top: 250px;
+	.blue-arrow {
+		position: absolute;
+		top: calc(150px - 25px);
+		width: 51px;
+		height: 50px;
+		background-color: #fff;
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+		border-radius: 50%;
+		display: flex;
+		img {
+			margin: auto;
+			width: 16px;
+		}
+		&.left-arrow {
+			left: -75px;
+		}
+		&.right-arrow {
+			right: -15px;
+		}
+		&:hover {
+			background-color: #d6d6d6;
+		}
+	}
+	.our-team__people {
+		margin: 0 auto;
+		width: 64.375em;
+		height: 300px;
+		display: flex;
+		position: relative;
+		transform: translateX(@shift*3);
+		.people__card {
+			width: 260px;
+			height: 278px;
+			border-radius: 4px;
+			background-color: #ffffff;
+			box-shadow: 10px 17px 50px 0px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			&.people__card--active {
+				#repeatedCode > .card--highlight;
+			}
+			&:nth-child(2) {
+				transform: translate(-@shift, @shift);
+				z-index: 100;
+			}
+			&:nth-child(3) {
+				transform: translateX(-@shift*2);
+			}
+			&:nth-child(4) {
+				transform: translate(-@shift*3, @shift);
+				z-index: 100;
+			}
+			.people__image {
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border-radius: 50%;
+				border: 2px solid #fff;
+				margin: 20px auto 0;
+			}
+			.people__name {
+				font-family: Montserrat;
+				color: @blue;
+				font-size: 18px;
+				font-weight: 400;
+				margin: 10px auto 0;
+			}
+			.people__twitter {
+				font-family: Raleway;
+				color: #8c8c8c;
+				font-size: 14px;
+				font-weight: 400;
+				margin: 0 auto;
+			}
+			.people__separator {
+				width: 31px;
+				margin: 10px auto;
+			}
+			.people__location {
+				margin: 0 auto;
+				font-family: Raleway;
+				color: #8c8c8c;
+				font-size: 14px;
+				font-weight: 400;
+				img {
+					width: 11px;
+					padding-right: 5px;
+				}
+			}
+			&:hover {
+				#repeatedCode > .card--highlight;
+			}
 		}
 	}
 }
