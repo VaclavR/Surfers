@@ -28,6 +28,9 @@
 #repeatedCode .card--highlight .people__location {
   color: #b3e7ff;
 }
+#repeatedCode .updates__card--highlight {
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: aquamarine;
@@ -75,7 +78,7 @@ body {
 }
 .background.five {
   top: 2490px;
-  height: 1000px;
+  height: 1500px;
 }
 img {
   width: 100%;
@@ -430,16 +433,6 @@ img {
   display: flex;
   flex-direction: column;
 }
-.our-team .our-team__people .people__card.people__card--active {
-  background-color: #00b0ff;
-}
-.our-team .our-team__people .people__card.people__card--active .people__name {
-  color: #fff;
-}
-.our-team .our-team__people .people__card.people__card--active .people__twitter,
-.our-team .our-team__people .people__card.people__card--active .people__location {
-  color: #b3e7ff;
-}
 .our-team .our-team__people .people__card:nth-child(2) {
   transform: translate(-20px, 20px);
   z-index: 100;
@@ -488,13 +481,124 @@ img {
   width: 11px;
   padding-right: 5px;
 }
-.our-team .our-team__people .people__card:hover {
+.our-team .our-team__people .people__card:hover,
+.our-team .our-team__people .people__card.people__card--active {
   background-color: #00b0ff;
 }
-.our-team .our-team__people .people__card:hover .people__name {
+.our-team .our-team__people .people__card:hover .people__name,
+.our-team .our-team__people .people__card.people__card--active .people__name {
   color: #fff;
 }
 .our-team .our-team__people .people__card:hover .people__twitter,
-.our-team .our-team__people .people__card:hover .people__location {
+.our-team .our-team__people .people__card.people__card--active .people__twitter,
+.our-team .our-team__people .people__card:hover .people__location,
+.our-team .our-team__people .people__card.people__card--active .people__location {
   color: #b3e7ff;
+}
+.updates {
+  width: 54.375em;
+  margin: 175px auto;
+  display: flex;
+  flex-direction: column;
+}
+.updates h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.updates .updates__cards {
+  display: flex;
+  justify-content: space-between;
+}
+.updates .updates__cards .updates__card {
+  width: 270px;
+  flex-basis: 30%;
+}
+.updates .updates__cards .updates__card .updates__text {
+  font-family: Raleway;
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 10px;
+}
+.updates .updates__cards .updates__card:hover,
+.updates .updates__cards .updates__card.updates__cards--active {
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+}
+.updates .button {
+  width: 137px;
+  margin: 30px auto;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 72em;
+  margin: 0 auto;
+}
+.socials .socials__instagram {
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+}
+.socials .socials__instagram .big-text {
+  color: rgba(0, 0, 0, 0.03);
+  font-size: 90px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+.socials .socials__instagram .instagram__gallery {
+  display: flex;
+  flex-direction: column;
+}
+.socials .socials__instagram .instagram__gallery .gallery__row {
+  display: flex;
+}
+.socials .socials__instagram .instagram__gallery .gallery__row .gallery__image {
+  width: 310px;
+  height: 310px;
+}
+.socials .socials__instagram .instagram__follow {
+  width: 620px;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+}
+.socials .socials__instagram .instagram__follow img {
+  width: 30px;
+  height: 30px;
+  padding-left: 20px;
+  align-self: center;
+}
+.socials .socials__instagram .instagram__follow .first-span {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #00b0ff;
+  font-size: 24px;
+  text-transform: uppercase;
+  align-self: center;
+  padding-left: 20px;
+}
+.socials .socials__instagram .instagram__follow .second-span {
+  font-family: Raleway;
+  align-self: center;
+  padding-left: 20px;
+}
+.socials .socials__facebook {
+  margin-top: 180px;
+  width: 440px;
+  height: 348px;
+  display: flex;
+  flex-direction: column;
+  background: url("../imgs/FB-Background.png");
+}
+.socials .socials__facebook .facebook__logo {
+  width: 153px;
+  margin: 10px auto;
+}
+.socials .socials__facebook .facebook__box {
+  width: 340px;
+  margin: 0 auto;
 }
