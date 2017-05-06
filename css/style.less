@@ -6,7 +6,6 @@
 		list-style: none;
 		display: inline-block;
 		margin: 0 0 0 60px;
-		padding: 0;
 	}
 	.nav-item--highlight {
 		color: #fff;
@@ -23,7 +22,7 @@
 		transition: 0.3s all ease-out;
 	}
 	.card--highlight {
-		background-color: #00b0ff;
+		background-color: @blue;
 		.people__name {
 			color: #fff;
 		}
@@ -121,25 +120,25 @@ img {
 }
 
 .nav {
-	width: 63.5em;
+	max-width: 63.5em;
 	height: 2.5em;
 	margin: 0 auto 1.25em;
     padding-top: 1.25em;
-	.nav__logo {
+	&__logo {
 		font-size: 1.875em;
 		font-weight: 700;
 		vertical-align: 0.15em;
 	}
-	.nav__items {
+	&__items {
 		#repeatedCode > .nav__ul;
 		padding: 0 0 1.3125em 0;
     	vertical-align: middle;
 		font-size: 0.875em;
 	}
-	.nav__item {
+	&__item {
 		display: inline-block;
 	}
-	.nav__link {
+	&__link {
 		text-decoration: none;
 		color: #000;
 		padding: 5px 15px;
@@ -147,13 +146,13 @@ img {
 			#repeatedCode > .nav-item--highlight;
 		}
 	}
-	.nav__link--active {
+	&__link--active {
 		#repeatedCode > .nav-item--highlight;
 	}
-	.nav__icons {
+	&__icons {
 		#repeatedCode > .nav__ul;
 	}
-	.nav__item--icon {
+	&__item__icon {
 		background-color: #000;
 		border-radius: 50%;
 		display: inline-block;
@@ -163,7 +162,7 @@ img {
 			background-color: #4C58C8;
 		}
 	}
-	.nav__icon {
+	&__icon {
 		height: 2.250em;
 		transform: scale(0.5, 0.5);
 	}
@@ -174,10 +173,10 @@ img {
 	margin: 3.75em auto 0;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
-	.header__h1 {
+	&__h1 {
 		font-size: 3.125em;
 	}
-	.header__p {
+	&__p {
 		color: #fff;
 		font-size: 1.5em;	
 	}
@@ -191,18 +190,18 @@ img {
 	display: flex;
 	background-color: #fff;
 	background: linear-gradient(128.8deg, #00d2ff 0%, #00d2ff 32%, #ffffff 32%, #ffffff 100%);
-	.carousel__column-left {
+	&__column-left {
 		flex: 42.57;
-		.carousel__image {
+		&__image {
 			width: 79.5%;
     		margin: 17.68% auto;
 		}
 	}
-	.carousel__column-middle {
+	&__column-middle {
 		flex: 6.8;
 		display: flex;
   		align-items: center;
-		.carousel__small-image-container {
+		&__small-image-container {
 			display: flex;
     		flex-direction: column;
 			margin-top: 25px;
@@ -215,11 +214,11 @@ img {
 				#repeatedCode > .small-image--highlight;
 			}
 		}
-		.carousel__small-image--active {
+		&__small-image--active {
 			#repeatedCode > .small-image--highlight;
 		}
 	}
-	.carousel__column-right {
+	&__column-right {
 		flex: 42.57;
 		display: flex;
 		.carousel__content-container {
@@ -418,7 +417,7 @@ img {
 			right: -15px;
 		}
 		&:hover {
-			background-color: #d6d6d6;
+			background-color: @blue;
 		}
 	}
 	.our-team__people {
@@ -654,6 +653,9 @@ img {
 				}
 				.submit-button {
 					float: right;
+					&:hover {
+						cursor: pointer;
+					}
 				}
 			}
 		}
