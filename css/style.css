@@ -347,7 +347,7 @@ img {
   margin: 44.75em 0 0;
   height: 600px;
 }
-.about-us .about-us__container {
+.about-us__container {
   display: flex;
 }
 .about-us .about-us__text {
